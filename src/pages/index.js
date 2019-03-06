@@ -2,9 +2,10 @@ import React from "react"
 import { Link } from "gatsby"
 import Helmet from 'react-helmet'
 
+import Layout from '../components/Layout';
 import Image from "../components/image"
 import SEO from "../components/seo"
-import App from '../components/App';
+import AboutMeSnippet from '../components/AboutMeSnippet';
 
 // const IndexPage = () => (
 //   <Layout>
@@ -20,12 +21,11 @@ import App from '../components/App';
 // )
 
 const IndexPage = () => (
-  <div style={{ height: '100%', width: '100%', position: 'absolute', background: 'black' }}>
-    <Helmet>
-      <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet" />
+  <Layout>
+    <Helmet title="Welcome">
     </Helmet>
-    <App />
-  </div>
+    <AboutMeSnippet />
+  </Layout>
 );
 
 export default IndexPage
