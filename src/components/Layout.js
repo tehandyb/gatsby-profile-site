@@ -5,6 +5,7 @@ import { Global, css } from '@emotion/core'
 import '../../node_modules/normalize.css/normalize.css'
 import './Layout.scss'
 import TexGyreHelvetica from '../fonts/texgyreheros-regular-webfont.woff'
+import 'typeface-jura'
 
 const globalStyles = css`
   body {
@@ -12,10 +13,10 @@ const globalStyles = css`
   }
   
   @font-face {
-      font-family: 'TexGyreHelvetica';
-      src: url(${TexGyreHelvetica}) format('woff');
-      font-weight: normal;
-      font-style: normal;
+    font-family: 'TexGyreHelvetica';
+    src: url(${TexGyreHelvetica}) format('woff');
+    font-weight: normal;
+    font-style: normal;
   }
 `;
 
@@ -23,7 +24,7 @@ const Body = styled.div`
   width: 100vw;
   height: 100vh;
   color: white;
-  font-family: 'TexGyreHelvetica';
+  font-family: 'TexGyreHelvetica', sans-serif;
 `;
 
 const Layout = ({ children }) => (
