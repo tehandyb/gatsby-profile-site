@@ -27,6 +27,9 @@ const Main = styled.div`
 
 const Layout = ({ children }) => (
   <Main>
+    <Helmet>
+      <title>Andrew Blowe</title>
+    </Helmet>
     <Global styles={globalStyles} />
     {children}
   </Main>

@@ -22,8 +22,6 @@ import AboutMeSnippet from '../components/AboutMeSnippet';
 
 const IndexPage = () => (
   <Layout>
-    <Helmet title="Welcome">
-    </Helmet>
     <AboutMeSnippet />
   </Layout>
 );
