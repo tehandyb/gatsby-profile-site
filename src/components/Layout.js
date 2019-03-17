@@ -9,7 +9,7 @@ import 'typeface-jura'
 
 const globalStyles = css`
   body {
-    background-color: black;
+    background-color: #ababab;
   }
   
   @font-face {
@@ -20,18 +20,16 @@ const globalStyles = css`
   }
 `;
 
-const Body = styled.div`
-  width: 100vw;
-  height: 100vh;
-  color: white;
+const Main = styled.div`
+  color: #dbf3ff;
   font-family: 'TexGyreHelvetica', sans-serif;
 `;
 
 const Layout = ({ children }) => (
-  <Body>
+  <Main>
     <Global styles={globalStyles} />
     {children}
-  </Body>
+  </Main>
 );
 
 export default Layout;
