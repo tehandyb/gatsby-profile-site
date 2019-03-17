@@ -5,8 +5,6 @@ import OverviewPanel from '../components/OverviewPanel'
 
 const Home = () => (
   <Layout>
-    <Helmet title="Home">
-    </Helmet>
     <OverviewPanel />
   </Layout>
 );
