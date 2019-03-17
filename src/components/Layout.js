@@ -1,23 +1,35 @@
 import React from 'react';
 import Helmet from 'react-helmet'
+import styled from '@emotion/styled'
+import { Global, css } from '@emotion/core'
 import '../../node_modules/normalize.css/normalize.css'
 import './Layout.scss'
+import TexGyreHelvetica from '../fonts/texgyreheros-regular-webfont.woff'
+import 'typeface-jura'
 
-const style = {
-  backgroundColor: 'black',
-  width: '100vw',
-  height: '100vh',
-  color: 'white',
-  fontFamily: "'Jura', sans-serif"
-};
+const globalStyles = css`
+  body {
+    background-color: #ababab;
+  }
+  
+  @font-face {
+    font-family: 'TexGyreHelvetica';
+    src: url(${TexGyreHelvetica}) format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+`;
+
+const Main = styled.div`
+  color: #dbf3ff;
+  font-family: 'TexGyreHelvetica', sans-serif;
+`;
 
 const Layout = ({ children }) => (
-  <div style={style}>
-    <Helmet>
-      <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet" />
-    </Helmet>
+  <Main>
+    <Global styles={globalStyles} />
     {children}
-  </div>
+  </Main>
 );
 
 export default Layout;
