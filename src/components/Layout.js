@@ -25,13 +25,22 @@ const Main = styled.div`
   font-family: 'TexGyreHelvetica', sans-serif;
 `;
 
+const MaxWidth = styled.div`
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+`;
+
 const Layout = ({ children }) => (
   <Main>
     <Helmet>
       <title>Andrew Blowe</title>
     </Helmet>
     <Global styles={globalStyles} />
-    {children}
+    <MaxWidth>
+      {children}
+    </MaxWidth>
   </Main>
 );
 
