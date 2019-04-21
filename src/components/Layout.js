@@ -30,6 +30,7 @@ const MaxWidth = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 150px;
+  padding: 0 2em;
 `;
 
 const Layout = ({ children }) => (

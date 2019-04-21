@@ -2,33 +2,52 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
-const Flex = styled.div`
+const TwoColumn = styled.div`
   display: flex;
+  
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
 `;
 
 const Gallery = styled.div`
   display: flex;
   width: 50%;
+  margin: -10px;
+  margin-right: 14px;
+  
+  @media (max-width: 1024px) {
+    width: 100%;
+    margin-right: -10px;
+  }
 `;
 
 const Image = styled.img`
   width: 100%;
   height: auto;
   transition: all 1s;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const BigImage = styled.div`
   width: 100%;
+  margin: 10px;
 `;
 
 const ImageThumbnail = styled.div`
-  width: 200px;
-  margin-right: 10px;
+  width: auto;
+  margin: 10px;
   justify-content: space-between;
 `;
 
 const Caption = styled.div`
   width: 50%;
+  
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 class ImageGallery extends Component {
@@ -59,7 +78,7 @@ class ImageGallery extends Component {
     const { images, CaptionRenderer } = this.props;
     
     return (
-      <Flex>
+      <TwoColumn>
         <Gallery> 
           {!this.state.currentImage ? this.showAllImages(images)
             : <BigImage><Image key={this.state.currentImage.id} src={this.state.currentImage.src} alt={this.state.currentImage.alt} onClick={() => this.toggleImage(this.state.currentImage)} /></BigImage>}
@@ -67,7 +86,7 @@ class ImageGallery extends Component {
         <Caption>
           <CaptionRenderer caption={this.state.currentImage ? this.state.currentImage.caption : null} />
         </Caption>
-      </Flex>
+      </TwoColumn>
     );
   }
 };
