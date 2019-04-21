@@ -8,7 +8,7 @@
     left: 50%;
     position: absolute;
     transform: translateX(-50%) translateY(-50%);
-    width: 50%;
+    width: 95%;
     margin: auto;
     text-align: center;
     color: white;
@@ -54,7 +54,7 @@
       width: 120px;
       text-align: center;
       margin-top: 20px;
-      
+      margin-right: 10px;
       &:hover {
         background: #e32114;
       }
@@ -68,7 +68,7 @@
       width: 120px;
       text-align: center;
       margin-top: 20px;
-      margin-left: 10px;
+      
       &:hover {
         background: #006eff;
       }
