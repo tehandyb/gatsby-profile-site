@@ -26,7 +26,7 @@ const Main = styled.div`
 `;
 
 const MaxWidth = styled.div`
-  max-width: 1200px;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 150px;

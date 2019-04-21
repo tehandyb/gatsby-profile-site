@@ -13,19 +13,19 @@ const TwoColumn = styled.div`
 const Gallery = styled.div`
   display: flex;
   width: 50%;
-  margin: -10px;
-  margin-right: 14px;
+  margin: -5px;
+  margin-right: 19px;
+  flex-wrap: wrap;
   
   @media (max-width: 1024px) {
     width: 100%;
-    margin-right: -10px;
+    margin-right: -5px;
   }
 `;
 
 const Image = styled.img`
   width: 100%;
   height: auto;
-  transition: all 1s;
   &:hover {
     cursor: pointer;
   }
@@ -33,13 +33,14 @@ const Image = styled.img`
 
 const BigImage = styled.div`
   width: 100%;
-  margin: 10px;
+  padding: 5px;
 `;
 
 const ImageThumbnail = styled.div`
-  width: auto;
-  margin: 10px;
+  width: 50%;
+  padding: 5px;
   justify-content: space-between;
+  box-sizing: border-box;
 `;
 
 const Caption = styled.div`
@@ -75,12 +76,12 @@ class ImageGallery extends Component {
   }
   
   render() {
-    const { images, CaptionRenderer } = this.props;
+    const { imagesWithCaptions, CaptionRenderer } = this.props;
     
     return (
       <TwoColumn>
         <Gallery> 
-          {!this.state.currentImage ? this.showAllImages(images)
+          {!this.state.currentImage ? this.showAllImages(imagesWithCaptions)
             : <BigImage><Image key={this.state.currentImage.id} src={this.state.currentImage.src} alt={this.state.currentImage.alt} onClick={() => this.toggleImage(this.state.currentImage)} /></BigImage>}
         </Gallery>
         <Caption>
@@ -92,12 +93,12 @@ class ImageGallery extends Component {
 };
 
 ImageGallery.propTypes = {
-  images: PropTypes.array,
+  imagesWithCaptions: PropTypes.array,
   CaptionRenderer: PropTypes.func
 };
 
 ImageGallery.defaultProps = {
-  images: [],
+  imagesWithCaptions: [],
   CaptionRenderer: (<div>Caption goes here</div>)
 }
 
