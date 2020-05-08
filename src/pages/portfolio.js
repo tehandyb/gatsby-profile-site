@@ -10,6 +10,7 @@ import faeCountryImage from '../images/eadsCountryDashboard.jpg';
 
 const LayoutHeading = styled.h1`
   color: white;
+  margin-bottom: 3rem;
 `;
 
 const ProjectTitle = styled.h2`
@@ -30,10 +31,12 @@ const ProjectDescription = styled.div`
 `;
 
 const SectionContainer = styled.div`
-  box-shadow: 11px 36px 62px -10px rgba(0,0,0,0.2);
+  box-shadow: 11px 36px 62px -10px #8e8e8e;
   margin-bottom: 4em;
   padding: 24px;
-  border-radius: 12px;
+  border-radius: 0 20px 20px 0;
+  background: #b1b1b1;
+  border-left: 12px solid #2d9ea9;
 `;
 
 const capterraInfo = {

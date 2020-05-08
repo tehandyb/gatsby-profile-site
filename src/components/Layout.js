@@ -35,7 +35,7 @@ const MaxWidth = styled.div`
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 6rem;
+  margin-top: 4rem;
   padding: 0 6rem;
 `;
 
