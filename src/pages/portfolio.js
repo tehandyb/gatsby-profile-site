@@ -99,7 +99,7 @@ const barquinImages = [
 
 const Portfolio = () => {
   return (
-    <Layout>
+    <Layout showNav>
       <LayoutHeading>Portfolio</LayoutHeading>
       <SectionContainer>
         <ImageGallery CaptionRenderer={CaptionRenderer(capterraInfo)} imagesWithCaptions={capterraImages} />
