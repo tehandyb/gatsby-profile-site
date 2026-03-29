@@ -6,17 +6,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-emotion`,
-    'gatsby-plugin-sass',
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-sass',
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        implementation: require('sass'),
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

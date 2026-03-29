@@ -6,7 +6,7 @@ export default function() {
   return (
     <div className="overview-panel">
       <img className="profile-image" src={ProfileImage} />
-      <div className="center-text">This website is under construction! Check back later for updates or email me at tehandyb@gmail.com</div>
+      <div className="center-text">This website is under construction! Check back later for updates or email me at andrewblowe@gmail.com</div>
     </div>
   )
 }
